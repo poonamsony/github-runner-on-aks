@@ -5,6 +5,9 @@ metadata:
 spec:
   replicas: 1
   template:
-    spec:
+   spec:
       repository: yaronpri/GithubRunnerOnAKS
-      #organization: <YOUR ORG NAME IF WANT TO WORK AT ORG LEVEL>  
+      #organization: <YOUR ORG NAME IF WANT TO WORK AT ORG LEVEL> 
+      image: ghcr.io/yaronpri/GithubRunnerOnAKS:<tag>
+      imagePullSecrets:
+      - name: runnersecret
